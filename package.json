@@ -25,8 +25,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format:check",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "",
+      "commit-msg": ""
     }
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "@babel/preset-env": "^7.12.16",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@macaronswap-libs/eslint-config-macaron": "0.1.0",
+    "@macaronswap-libs/eslint-config-macaron": "1.0.1",
     "@rollup/plugin-typescript": "^8.2.0",
     "@rollup/plugin-url": "^6.0.0",
     "@storybook/addon-a11y": "^6.1.21",
