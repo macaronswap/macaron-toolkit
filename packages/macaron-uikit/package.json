@@ -1,6 +1,6 @@
 {
   "name": "@macaronswap-libs/uikit",
-  "version": "0.15.2",
+  "version": "0.15.4",
   "description": "Set of UI components for macaron projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/macaronswap/macaron-toolkit/tree/master/packages/macaron-uikit",
+  "repository": "https://github.com/macaronswap/macaron-toolkit/tree/main/packages/macaron-uikit",
   "license": "MIT",
   "scripts": {
     "start": "yarn storybook",
