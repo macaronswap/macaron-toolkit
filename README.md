@@ -23,3 +23,10 @@ yarn
 ```
 
 Then, refer to the readme of each project.
+
+For publish new version of uikit
+
+```
+yarn run build
+yarn publish
+```
