@@ -43,10 +43,15 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 };
 
 const StyledButton = styled.button<BaseButtonProps>`
+
+
+  backdrop-filter: blur( 7.0px );
+  -webkit-backdrop-filter: blur( 7.0px );
   align-items: center;
   border: 0;
-  border-radius: 16px;
-  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -55,16 +60,15 @@ const StyledButton = styled.button<BaseButtonProps>`
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
-  opacity: ${getOpacity};
   outline: 0;
   transition: background-color 0.2s;
 
   &:hover:not(:disabled):not(.macaron-button--disabled):not(.macaron-button--disabled):not(:active) {
-    opacity: 0.65;
+    opacity: 0.45;
   }
 
   &:active:not(:disabled):not(.macaron-button--disabled):not(.macaron-button--disabled) {
-    opacity: 0.85;
+    opacity: 0.65;
   }
 
   ${getDisabledStyles}

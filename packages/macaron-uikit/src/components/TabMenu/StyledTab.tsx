@@ -13,13 +13,13 @@ const StyledTab = styled.button<StyledTabProps>`
   outline: 0;
   flex-grow: 1;
   padding: 8px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 4px 4px 0 0;
   color: ${({ theme, color }) => theme.colors[color]};
   background-color: ${({ theme, bgColor }) => theme.colors[bgColor]};
 
   ${({ theme }) => theme.mediaQueries.md} {
     flex-grow: 0;
-    padding: 8px 12px;
+    padding: 6px 8px;
   }
 `;
 

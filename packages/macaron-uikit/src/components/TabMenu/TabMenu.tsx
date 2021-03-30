@@ -20,7 +20,7 @@ const Inner = styled(Flex)`
   flex-grow: 1;
 
   & > button + button {
-    margin-left: 4px;
+    margin-left: 2px;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {

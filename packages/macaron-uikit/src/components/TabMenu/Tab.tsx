@@ -6,7 +6,7 @@ import { Text } from "../Text";
 const Tab: React.FC<TabProps> = ({ isActive = false, onClick, children }) => {
   return (
     <StyledTab onClick={onClick} bgColor={isActive ? "textSubtle" : "input"} color={isActive ? "card" : "textSubtle"}>
-      <Text fontWeight={600} color={isActive ? "card" : "textSubtle"}>
+      <Text fontWeight={400} color={isActive ? "text" : "textSubtle"}>
         {children}
       </Text>
     </StyledTab>
