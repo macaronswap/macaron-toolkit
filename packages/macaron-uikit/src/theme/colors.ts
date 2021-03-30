@@ -23,7 +23,7 @@ export const lightColors: Colors = {
   invertedContrast: "#FFFFFF",
   input: "rgba( 223, 206, 249, 0.30 )",
   inputSecondary: "rgba( 223, 206, 249, 0.65 )",
-  tertiary: "#EFF4F5",
+  tertiary: "rgba( 224, 17, 93, 0.30 )",
   text: "#ffecf3",
   textDisabled: "#c595a7",
   textSubtle: "#8f80ba",

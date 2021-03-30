@@ -3,6 +3,7 @@ import { SvgProps } from "../../../components/Svg";
 import Text from "../../../components/Text/Text";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import Button from "../../../components/Button/Button";
+import Link from "../../../components/Link/Link";
 import * as IconModule from "../icons";
 import { LangType } from "../types";
 import MenuButton from "./MenuButton";
@@ -20,9 +21,10 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => (
   <Dropdown
     position="top-right"
     target={
-      <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-        <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-      </Button>
+      
+      <Link external  href="#" color="textSubtle">
+        {<LanguageIcon color="textSubtle" width="24px" />} {currentLang?.toUpperCase()}
+      </Link>
     }
   >
     {langs.map((lang) => (

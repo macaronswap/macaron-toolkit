@@ -27,13 +27,31 @@ const LinkLabel = styled.div<{ isPushed: boolean }>`
 const MenuEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
+  position: relative;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: ${({ secondary }) => (secondary ? "0 32px" : "0 8px")};
+  padding: ${({ secondary }) => (secondary ? "0 26px" : "0 6px")};
   font-size: ${({ secondary }) => (secondary ? "10px" : "12px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: ${({ theme }) => theme.colors.textSubtle};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  &:before {
+    width: 0px;
+    content: "";
+    left: 0;
+    top: -5%;
+    height: 110%;
+    border-top-right-radius: .38rem;
+    border-bottom-right-radius: .38rem;
+    position: absolute;
+    z-index: 20;
+    transition: width .2s;
+    ${({ isActive, theme }) => (isActive ? `
+    background-color:  ${theme.colors.textSubtle};
+    width: 4px;
+    ` : `
+    width: 0px;
+    `)}
+  }
 
   a {
     display: flex;
@@ -47,7 +65,12 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    background: ${({ theme }) => theme.colors.tertiary};
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+    -webkit-backdrop-filter: blur( 17.5px );
+    border-top: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   // Safari fix

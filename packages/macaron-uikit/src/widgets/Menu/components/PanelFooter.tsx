@@ -5,7 +5,6 @@ import IconButton from "../../../components/Button/IconButton";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
 import MacaronPrice from "./MacaronPrice";
-import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 
@@ -13,31 +12,28 @@ interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   flex: none;
-  padding: 8px 4px;
+  padding: 8px 16px;
   background-color: ${({ theme }) => theme.nav.background};
   border-top: solid 2px rgba(133, 133, 133, 0.1);
 `;
 
-const SettingsEntry = styled.div`
+const FooterTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 16px;
 `;
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
-  toggleTheme,
   isDark,
   macaronPriceUsd,
   currentLang,
@@ -56,14 +52,13 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      <SocialEntry>
+      <FooterTop>
         <MacaronPrice macaronPriceUsd={macaronPriceUsd} />
+        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
+      </FooterTop>
+      <SocialEntry>
         <SocialLinks />
       </SocialEntry>
-      <SettingsEntry>
-        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
-        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
-      </SettingsEntry>
     </Container>
   );
 };
