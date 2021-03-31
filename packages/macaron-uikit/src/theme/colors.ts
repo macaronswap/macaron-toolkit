@@ -2,9 +2,9 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#ED4B9E",
-  primary: "rgba( 241, 121, 153, 0.55 )",
-  primaryBright: "rgba( 255, 184, 204, 0.55 )",
-  primaryDark: "rgba( 149, 34, 70, 0.65 )",
+  primary: "#EC7899",
+  primaryBright: "#ffc2d4",
+  primaryDark: "#822a44",
   secondary: "rgba( 118, 69, 217, 0.55 )",
   success: "rgba( 0, 230, 118, 0.55 )",
   warning: "rgba( 255, 178, 55, 0.55 )",
@@ -17,7 +17,7 @@ export const brandColors = {
 export const lightColors: Colors = {
   ...baseColors,
   ...brandColors,
-  background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,17,95,1) 35%, rgba(28,17,95,1) 100%)",
+  background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
   backgroundDisabled: "#E9EAEB",
   contrast: "#191326",
   invertedContrast: "#FFFFFF",
@@ -26,9 +26,9 @@ export const lightColors: Colors = {
   tertiary: "rgba( 224, 17, 93, 0.30 )",
   text: "#ffecf3",
   textDisabled: "#c595a7",
-  textSubtle: "#8f80ba",
+  textSubtle: "#faddfd",
   borderColor: "rgba( 255, 255, 255, 0.18 )",
-  card: "rgba( 236, 120, 153, 0.25 )",
+  card: "rgba( 100, 100, 100, 0.25 );",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #f3efff 0%, #FFEFF2 100%)",
   },

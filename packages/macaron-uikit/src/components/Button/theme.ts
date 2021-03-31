@@ -22,11 +22,11 @@ export const styleVariants = {
     color: "white",
   },
   [variants.SECONDARY]: {
-    backgroundColor: "transparent",
-    border: "2px solid",
-    borderColor: "primary",
-    boxShadow: "none",
-    color: "primary",
+    backgroundColor: "rgba( 255, 255, 255, 0.25 )",
+    border: "1px solid",
+    borderColor: " rgba( 255, 255, 255, 0.18 )",
+    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    color: "#FFFFFF",
     ":disabled": {
       backgroundColor: "transparent",
     },

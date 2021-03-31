@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
-import { PanelProps, PushedProps } from "../types";
+import { PanelProps, PushedProps, NavProps } from "../types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends PanelProps, PushedProps, NavProps {
   showMenu: boolean;
   isMobile: boolean;
 }
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
-  padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
   top: 0;
   left: 0;
   display: flex;
@@ -41,6 +41,7 @@ const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
+      <PanelHeader {...props} />
       <PanelBody {...props} />
       <PanelFooter {...props} />
     </StyledPanel>
