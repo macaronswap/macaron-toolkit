@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import PanIcon from "./PanIcon";
 import MacaronIcon from "./MacaronIcon";
 import { SpinnerProps } from "./types";
 
@@ -37,16 +36,10 @@ const RotatingMacaronIcon = styled(MacaronIcon)`
   transform: translate3d(0, 0, 0);
 `;
 
-const FloatingPanIcon = styled(PanIcon)`
-  animation: ${float} 6s ease-in-out infinite;
-  transform: translate3d(0, 0, 0);
-`;
-
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <RotatingMacaronIcon width={`${size * 0.5}px`} />
-      <FloatingPanIcon width={`${size}px`} />
+      <RotatingMacaronIcon width={`${size}px`} />
     </Container>
   );
 };

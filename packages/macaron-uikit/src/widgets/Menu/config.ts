@@ -123,52 +123,12 @@ export const socials = [
         href: "https://t.me/macaronswap",
       },
       {
-        label: "Bahasa Indonesia",
-        href: "https://t.me/MacaronSwapIndonesia",
-      },
-      {
-        label: "中文",
-        href: "https://t.me/MacaronSwap_CN",
-      },
-      {
-        label: "Tiếng Việt",
-        href: "https://t.me/MacaronSwapVN",
-      },
-      {
-        label: "Italiano",
-        href: "https://t.me/Macaron_ita",
-      },
-      {
-        label: "русский",
-        href: "https://t.me/Macaron_ru",
-      },
-      {
         label: "Türkiye",
-        href: "https://t.me/Macaronturkiye",
-      },
-      {
-        label: "Português",
-        href: "https://t.me/MacaronSwapPortuguese",
-      },
-      {
-        label: "Español",
-        href: "https://t.me/MacaronswapEs",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/Macaronjp",
-      },
-      {
-        label: "Français",
-        href: "https://t.me/Macaronfr",
+        href: "https://t.me/macaronswap_TR",
       },
       {
         label: "Announcements",
-        href: "https://t.me/MacaronSwapAnn",
-      },
-      {
-        label: "Whale Alert",
-        href: "https://t.me/MacaronSwapWhales",
+        href: "https://t.me/macaronswapann",
       },
     ],
   },

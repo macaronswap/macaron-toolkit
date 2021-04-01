@@ -54,11 +54,11 @@ const PanelFooter: React.FC<Props> = ({
     <Container>
       <FooterTop>
         <MacaronPrice macaronPriceUsd={macaronPriceUsd} />
-        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
+        {/**<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />  */}
+        <SocialEntry>
+          <SocialLinks />
+        </SocialEntry>
       </FooterTop>
-      <SocialEntry>
-        <SocialLinks />
-      </SocialEntry>
     </Container>
   );
 };

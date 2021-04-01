@@ -37,6 +37,8 @@ const MenuEntry = styled.div<Props>`
   ${({ isActive, theme }) => (isActive ? `
     margin-left: 16px;
     margin-right: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     background-color: rgba(255, 255, 255, .15);  
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );

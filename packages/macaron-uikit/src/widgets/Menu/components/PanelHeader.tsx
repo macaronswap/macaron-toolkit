@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import UserBlock from "./../components/UserBlock";
 import Flex from "../../../components/Box/Flex";
-import Logo from "./../components/Logo";
 import { useMatchBreakpoints } from "./../../../hooks";
 import Avatar from "./../components/Avatar";
 import throttle from "lodash/throttle";
 import { PanelProps, PushedProps, NavProps } from "../types";
+import Image from "../../../components/Image/Image";
 
 interface Props extends PanelProps, PushedProps, NavProps {
   isMobile: boolean;
@@ -17,6 +17,7 @@ interface Props extends PanelProps, PushedProps, NavProps {
   padding-bottom: 5px;
   height: 185px;
   align-content: center;
+  padding: 12px;
 `;
 
 const Auth = styled.div`
@@ -71,11 +72,14 @@ const Auth = styled.div`
 
   return (
     <Container>
+      {/* 
       <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           href={homeLink?.href ?? "/"}
         />
+        */ }
+        <Image src="/images/macaron-with-text.svg" alt="MacaronSwap" height={50} width={300}/>
         <Auth>
           <Flex>
             <UserBlock account={account} login={login} logout={logout} />

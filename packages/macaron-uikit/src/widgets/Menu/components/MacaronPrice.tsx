@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { MacaronRoundIcon } from "../../../components/Svg";
 import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
-
+import PriceImage from "../../../components/Image/PriceImage";
 interface Props {
   macaronPriceUsd?: number;
 }
@@ -23,8 +22,8 @@ const PriceLink = styled.a`
 
 const MacaronPrice: React.FC<Props> = ({ macaronPriceUsd }) => {
   return macaronPriceUsd ? (
-    <PriceLink href="https://macaronswap.info/token/0xacb2d47827c9813ae26de80965845d80935afd0b" target="_blank">
-      <MacaronRoundIcon width="24px" mr="8px" />
+    <PriceLink href="https://macaronswap.finance/pancake" target="_blank">
+      <PriceImage src="/images/macaron.svg" alt="MacaronSwap" height={24} width={24} mr="8px"/>
       <Text color="textSubtle" bold>{`$${macaronPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
   ) : (
