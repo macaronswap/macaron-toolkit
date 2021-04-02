@@ -70,6 +70,14 @@ const Auth = styled.div`
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
+  if(!isPushed) {
+    return (
+      <Container>
+          <Image src="/images/macaron-with-text.svg" alt="MacaronSwap" height={50} width={300}/>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       {/* 

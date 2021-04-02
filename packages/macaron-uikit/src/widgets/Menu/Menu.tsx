@@ -9,23 +9,25 @@ import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import MenuButton from "./components/MenuButton";
+import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
 `;
 
-const StyledNav = styled.nav<{ showMenu: boolean }>`
+const StyledNav = styled.nav<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  left: 0;
+  left: ${({ isPushed }) => (!isPushed ? 0 : `20%`)};
   transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 8px;
   padding-right: 16px;
-  width: 100%;
+  width: ${({ isPushed }) => (!isPushed ? `100%` : `80%`)};
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -116,18 +118,20 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      {/* <StyledNav showMenu={showMenu}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
+      ${(isMobile && !isPushed) ? 
+      <StyledNav isPushed={isPushed} showMenu={showMenu}>
         <Flex>
+        <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(true)} mr="24px">
+          {isPushed ? (
+            <HamburgerCloseIcon width="24px" color="textSubtle" />
+          ) : (
+            <HamburgerIcon width="24px" color="textSubtle" />
+          )}
+        </MenuButton>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
         </Flex>
-      </StyledNav> */}
+      </StyledNav>
+      : <Wrapper/>}
       <BodyWrapper>
         <Panel
           account={account}

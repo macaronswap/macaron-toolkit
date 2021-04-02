@@ -7,6 +7,8 @@ import { PanelProps, PushedProps } from "../types";
 import MacaronPrice from "./MacaronPrice";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
+import MenuButton from "./MenuButton";
+import { HamburgerCloseIcon, HamburgerIcon } from "../icons";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -40,15 +42,21 @@ const PanelFooter: React.FC<Props> = ({
   langs,
   setLang,
 }) => {
+  /*
   if (!isPushed) {
     return (
       <Container>
-        <IconButton variant="text" onClick={() => pushNav(true)}>
-          <CogIcon />
-        </IconButton>
+        <MenuButton aria-label="Toggle menu" onClick={() => pushNav(true)} mr="24px">
+          {isPushed ? (
+            <HamburgerCloseIcon width="24px" color="textSubtle" />
+          ) : (
+            <HamburgerIcon width="24px" color="textSubtle" />
+          )}
+        </MenuButton>
       </Container>
     );
   }
+  */
 
   return (
     <Container>
