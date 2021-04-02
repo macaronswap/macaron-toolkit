@@ -118,16 +118,16 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      ${(isMobile && !isPushed) ? 
+      {(isMobile && !isPushed) ? 
       <StyledNav isPushed={isPushed} showMenu={showMenu}>
         <Flex>
-        <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(true)} mr="24px">
-          {isPushed ? (
-            <HamburgerCloseIcon width="24px" color="textSubtle" />
-          ) : (
-            <HamburgerIcon width="24px" color="textSubtle" />
-          )}
-        </MenuButton>
+          <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(true)} mr="24px">
+            {isPushed ? (
+              <HamburgerCloseIcon width="24px" color="textSubtle" />
+            ) : (
+              <HamburgerIcon width="24px" color="textSubtle" />
+            )}
+          </MenuButton>
           <UserBlock account={account} login={login} logout={logout} />
         </Flex>
       </StyledNav>
