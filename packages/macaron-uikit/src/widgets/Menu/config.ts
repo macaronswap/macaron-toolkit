@@ -127,6 +127,14 @@ export const socials = [
         href: "https://t.me/macaronswap_TR",
       },
       {
+        label: "日本",
+        href: "https://t.me/macaronswap_JP",
+      },
+      {
+        label: "भारत",
+        href: "https://t.me/macaronswap_IN",
+      },
+      {
         label: "Announcements",
         href: "https://t.me/macaronswapann",
       },

@@ -20,7 +20,7 @@ export const lightColors: Colors = {
   background: "linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%)",
   backgroundDisabled: "#E9EAEB",
   contrast: "#191326",
-  invertedContrast: "#FFFFFF",
+  invertedContrast: "#e2cfcf2b",
   input: "rgba( 223, 206, 249, 0.30 )",
   inputSecondary: "rgba( 223, 206, 249, 0.65 )",
   tertiary: "rgba( 255, 255, 255, 0.30 )",

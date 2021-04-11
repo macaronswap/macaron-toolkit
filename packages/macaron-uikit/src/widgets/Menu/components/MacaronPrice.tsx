@@ -22,7 +22,7 @@ const PriceLink = styled.a`
 
 const MacaronPrice: React.FC<Props> = ({ macaronPriceUsd }) => {
   return macaronPriceUsd ? (
-    <PriceLink href="https://macaronswap.finance/pancake" target="_blank">
+    <PriceLink href="https://bscscan.com/token/0xacb2d47827c9813ae26de80965845d80935afd0b" target="_blank">
       <PriceImage src="/images/macaron.svg" alt="MacaronSwap" height={24} width={24} mr="8px"/>
       <Text color="textSubtle" bold>{`$${macaronPriceUsd.toFixed(3)}`}</Text>
     </PriceLink>
