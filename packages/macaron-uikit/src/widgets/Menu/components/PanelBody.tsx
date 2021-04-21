@@ -7,6 +7,7 @@ import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "../types";
+import { LinkExternal } from "../../../components/Link";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -63,10 +64,17 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         }
         return (
           <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
-            <MenuLink href={entry.href} onClick={handleClick}>
-              {iconElement}
-              <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-            </MenuLink>
+            {entry.target && entry.target === '_blank' ? (
+              <LinkExternal href={entry.href} onClick={handleClick}>
+                {iconElement}
+                <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
+              </LinkExternal>
+            ):(
+              <MenuLink href={entry.href} onClick={handleClick}>
+                {iconElement}
+                <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
+              </MenuLink>
+            )}
           </MenuEntry>
         );
       })}
