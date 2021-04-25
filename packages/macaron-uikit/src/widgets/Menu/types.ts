@@ -27,6 +27,7 @@ export interface MenuSubEntry {
   label: string;
   href: string;
   calloutClass?: string;
+  target?: string;
 }
 
 export interface MenuEntry {

@@ -11,6 +11,7 @@ export const links = [
       {
         label: "Exchange",
         href: "https://exchange.macaronswap.finance",
+        target: "_blank"
       },
       {
         label: "Liquidity",
