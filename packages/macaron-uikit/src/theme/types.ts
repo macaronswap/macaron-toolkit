@@ -40,12 +40,14 @@ export type Colors = {
   success: string;
   failure: string;
   warning: string;
+  cardBorder: string;
   contrast: string;
   invertedContrast: string;
   input: string;
   inputSecondary: string;
   background: string;
   backgroundDisabled: string;
+  backgroundAlt: string;
   text: string;
   textDisabled: string;
   textSubtle: string;
