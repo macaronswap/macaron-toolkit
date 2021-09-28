@@ -1,6 +1,6 @@
 {
   "name": "@macaronswap-libs/uikit",
-  "version": "0.21.9",
+  "version": "0.21.10",
   "description": "Set of UI components for macaron projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
